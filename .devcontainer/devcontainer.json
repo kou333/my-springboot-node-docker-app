@@ -1,0 +1,11 @@
+{
+  "name": "Java 21 + Node 20 + Docker Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "forwardPorts": [8080, 3000],
+  "postCreateCommand": "source ~/.bashrc && sdk install java 21.0.3-tem && nvm install 20 && nvm use 20"
+}
